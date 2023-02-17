@@ -6,7 +6,6 @@ import { heroData } from "../data/HeroData";
 import Button from "./Button";
 
 const HomeContainer = () => {
-  const transition = { transitionType: "linear", transitionDuration: "0.5s" };
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-3">
       <div className=" flex-1 flex flex-col items-start justify-center gap-5">

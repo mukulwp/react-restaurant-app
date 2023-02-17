@@ -16,8 +16,10 @@ import LogoImg from "../images/c1.png";
 import UserImg from "../images/avatar.png";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/Reducer";
+export let handleLogin;
 
 const Header = ({ onHideDropdown }) => {
+  
   const [toggleDropdown, setToggleDropdown] = useState(false);
   const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
 
@@ -44,7 +46,7 @@ const Header = ({ onHideDropdown }) => {
     });
   };
 
-  const handleLogin = async () => {
+   handleLogin = async () => {
     if (!user) {
       const {
         user: { refreshToken, providerData },

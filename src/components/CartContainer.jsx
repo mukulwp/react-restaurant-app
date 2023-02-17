@@ -7,6 +7,7 @@ import Button from "./Button";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/Reducer";
 import EmptyCart from "./EmptyCart";
+import { handleLogin } from "./Header";
 
 const CartContainer = () => {
   const [flag, setFlag] = useState(1);
@@ -94,7 +95,7 @@ const CartContainer = () => {
                 <Button btnText={"Check Out"} />
               </motion.div>
             ) : (
-              <motion.div whileTap={{ scale: 0.8 }}>
+              <motion.div whileTap={{ scale: 0.8 }} onClick={handleLogin}>
                 <Button btnText={"Login to check out"} />
               </motion.div>
             )}
